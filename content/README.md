@@ -1,5 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Intro
 ---
 # CTF Walkthroughs 🚩
 
