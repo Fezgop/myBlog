@@ -4,7 +4,6 @@ title: Intro
 # CTF Walkthroughs 🚩
 
 Welcome to the repository for my personal Capture The Flag (CTF) walkthrough blog! This site serves as my digital notebook where I document my solutions and learnings from various CTF challenges.
-
 ## ✨ Purpose
 
 The main goal of this project is to:
