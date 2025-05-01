@@ -3,6 +3,7 @@
 ``` shell
 Intrusion detection systems (IDS) are a tool commonly deployed to defend networks by automating the detection of suspicious activity.
 ```
+> Intrusion detection systems (IDS) are a tool commonly deployed to defend networks by automating the detection of suspicious activity.
 ## What IDS detection methodology relies on rule sets?
 ``` shell
 signature-based detection

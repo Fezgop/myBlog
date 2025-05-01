@@ -1,5 +1,7 @@
 src : [Wazuh - TryHackMe ](https://tryhackme.com/room/wazuhct)
-``` shell
+
+``` Shell
+
 Endpoint detection and response (EDR) are a series of tools and applications that monitor devices for an activity that could indicate a threat or security breach.
 ```
 
@@ -13,22 +15,25 @@ On wazuh you can deploy new agent on different OS like Windows, MacOS, Ubuntu, C
 # Wazuh Vulnerability Assessment & Security Events
 
 ``` xml
+
 This module is a powerful tool that can be used to periodically scan an agent's operating system for installed applications and their version numbers
 ```
 
 The vulnerability scanner module will perform a full scan when the Wazuh agent is first installed on a device and **must** be configured to run at a set interval then after (by default, this is set to 5 minute intervals when enabled)
 ![[Pasted image 20250501181948.png]]
-On _/var/ossec/etc/ossec.conf_
+On */var/ossec/etc/ossec.conf*
 
 # Wazuh Policy Auditing
 
 ``` xml
+
 Wazuh is capable of auditing and monitoring an agent's configuration whilst proactively recording event logs. When the Wazuh agent is installed, an audit is performed where a metric is given using multiple frameworks and legislations such as NIST, MITRE and GDPR.
 ```
 
 ![[Pasted image 20250501182809.png]]
 # Monitoring Logons with Wazuh
 ``` xml
+
 Wazuh's security event monitor is capable to actively record both successful and unsuccessful authentication attempts.
 ```
 
@@ -45,11 +50,13 @@ The alerts is stored in a specific file on the Wazuh management server ``/var/os
 
 # Collecting Windows Logs with Wazuh
 ``` shell
+
 All sorts of actions and events are captured and recorded on a Windows operating system. This includes authentication attempts, networking connections, files that were accessed, and the behaviours of applications and services. This information is stored in the Windows event log using a tool called Sysmon.
 ```
 
 # Collecting Linux Logs with Wazuh
 ``` shell
+
 Capturing logs from a Linux agent is a simple process similar to capturing events from a Windows agent. We will be using Wazuh’s log collector service to create an entry on the agent to instruct what logs should be sent to the Wazuh management server.
 ```
 
@@ -65,6 +72,7 @@ sudo apt install auditd audispd-plugins
 ```
 And enable this service to run currently as well as on boot
 ``` shell
+
 sudo systemctl enable auditd.service & sudo systemctl start auditd.service
 ```
 
