@@ -295,3 +295,4 @@ This task focuses on assessing security configurations against benchmarks.
 ## Conclusion
 
 This walkthrough covered the basic deployment and configuration of Wazuh server and agent, as well as exploring some of its core features like SIEM event analysis, vulnerability detection, file integrity monitoring, and security configuration assessment using the TryHackMe Wazuh room.
+
