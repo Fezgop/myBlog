@@ -1,5 +1,5 @@
 src : [Wazuh - TryHackMe ](https://tryhackme.com/room/wazuhct)
-```
+``` shell
 Endpoint detection and response (EDR) are a series of tools and applications that monitor devices for an activity that could indicate a threat or security breach.
 ```
 
@@ -12,7 +12,7 @@ On wazuh you can deploy new agent on different OS like Windows, MacOS, Ubuntu, C
 
 # Wazuh Vulnerability Assessment & Security Events
 
-```
+``` xml
 This module is a powerful tool that can be used to periodically scan an agent's operating system for installed applications and their version numbers
 ```
 
@@ -22,13 +22,13 @@ On _/var/ossec/etc/ossec.conf_
 
 # Wazuh Policy Auditing
 
-```
+``` xml
 Wazuh is capable of auditing and monitoring an agent's configuration whilst proactively recording event logs. When the Wazuh agent is installed, an audit is performed where a metric is given using multiple frameworks and legislations such as NIST, MITRE and GDPR.
 ```
 
 ![[Pasted image 20250501182809.png]]
 # Monitoring Logons with Wazuh
-```
+``` xml
 Wazuh's security event monitor is capable to actively record both successful and unsuccessful authentication attempts.
 ```
 
@@ -44,12 +44,12 @@ Wazuh's security event monitor is capable to actively record both successful and
 The alerts is stored in a specific file on the Wazuh management server ``/var/ossec/logs/alerts/alerts.log ``
 
 # Collecting Windows Logs with Wazuh
-```
+``` shell
 All sorts of actions and events are captured and recorded on a Windows operating system. This includes authentication attempts, networking connections, files that were accessed, and the behaviours of applications and services. This information is stored in the Windows event log using a tool called Sysmon.
 ```
 
 # Collecting Linux Logs with Wazuh
-```
+``` shell
 Capturing logs from a Linux agent is a simple process similar to capturing events from a Windows agent. We will be using Wazuh’s log collector service to create an entry on the agent to instruct what logs should be sent to the Wazuh management server.
 ```
 
@@ -84,7 +84,7 @@ Now, we'll add `auditd` log on `/var/ossec/etc/ossec.conf`
 # wazuh API
 
 ## Using Our Own Client
-```
+``` shell
 The Wazuh management server features a rich and extensive API to allow the Wazuh management server to be interacted with using the command line. Because the Wazuh management server requires authentication, we must first authenticate our client.
 ```
 
@@ -105,14 +105,14 @@ curl -k -X GET "https://WAZUH_MANAGEMENT_SERVER_IP:55000/manager/configuration?p
 ```
 
 ## Using Wazuh's API Console
-``` 
+``` shell 
 Wazuh has a powerful, integrated API console within the Wazuh website to query management servers and agents. Whilst it is not as extensive as using your own environment (where you can create and run scripts using python, for example), it is convenient.
 ```
 
 To find this API console, we need to open the "Tools" category within the Wazuh heading at the top. We can view the Wazuh's detailed [APIdocumentation](https://documentation.wazuh.com/current/user-manual/api/reference.html)
 
 # Generating Reports with Wazuh
-```
+``` shell
 Wazuh features a reporting module that allows you to view a summarised breakdown of events that have occurred on an agent.
 ```
 First, we will need to select a view to generate reports from. In this example, I want to generate a report of the security events in the last 24 hours. To do so, I will need to open the view: **1. Modules -> 2. Security Events**

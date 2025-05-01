@@ -1,10 +1,10 @@
 ![[Pasted image 20250501113158.png]]
 
-```
+``` shell
 Intrusion detection systems (IDS) are a tool commonly deployed to defend networks by automating the detection of suspicious activity.
 ```
 ## What IDS detection methodology relies on rule sets?
-```
+``` shell
 signature-based detection
 ```
 
@@ -25,7 +25,7 @@ NIDS (eg *Suricata*) monitor networks for malicious activity by checking packets
 ```
 
 ## What widely implemented protocol has an adverse effect on the reliability of NIDS?
-```
+``` shell
 TLS
 ```
 
