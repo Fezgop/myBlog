@@ -1,7 +1,7 @@
 src : [Wazuh - TryHackMe ](https://tryhackme.com/room/wazuhct)
-
+```
 Endpoint detection and response (EDR) are a series of tools and applications that monitor devices for an activity that could indicate a threat or security breach.
-
+```
 
 
 ---

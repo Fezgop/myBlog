@@ -1,8 +1,10 @@
 # Scenario
+```
+_Our IT team received an IPS alert on suspicious network behaviour and began investigating._ **_They reviewed the Security and System logs on all our Windows servers and concluded, "All event logs are empty, so hackers did not breach the servers."_**  _But guess what? A few days later, our website started showing some crypto scam ads and some servers were running at 100% CPU load!_
 
- _Our IT team received an IPS alert on suspicious network behaviour and began investigating._ **_They reviewed the Security and System logs on all our Windows servers and concluded, "All event logs are empty, so hackers did not breach the servers."_**  _But guess what? A few days later, our website started showing some crypto scam ads and some servers were running at 100% CPU load!_
+_While our IT team is recovering the critical servers, can you look at our old HR server (_**_HR01-SRV_**_)? We hosted salary review automations there that got unpopular, and the server is now rarely used. However, we noticed a spike in HTTP traffic from the Users' subnet and suspect it to be a part of the attack. We would_ **_appreciate seeing any evidence you can find there!_**
 
- _While our IT team is recovering the critical servers, can you look at our old HR server (_**_HR01-SRV_**_)? We hosted salary review automations there that got unpopular, and the server is now rarely used. However, we noticed a spike in HTTP traffic from the Users' subnet and suspect it to be a part of the attack. We would_ **_appreciate seeing any evidence you can find there!_**
+```
 
 I launch the Machine and connect directly to the machine using the giving information *Username*, *Password* and *IP(RDP*)
 ```  Shell
