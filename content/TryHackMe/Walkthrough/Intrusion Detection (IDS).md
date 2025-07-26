@@ -1,4 +1,4 @@
-![[Pasted image 20250501113158.png]]
+
 
 ```
 Intrusion detection systems (IDS) are a tool commonly deployed to defend networks by automating the detection of suspicious activity.
