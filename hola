@@ -1,51 +1,36 @@
-%{
-#include "../lexyacc-files/scores.h"  // TODO modifier le chemin si besoin
-%}
-%%
-
-[ \t\n\-]+ ;
-
-
-
-
-([A-Za-zà-ÿ]+([ \-][A-ZÀ-Ýa-zà-ÿ]+)*) { printf("Equipe : %s\n", yytext); }
-
-[0-9]+ { printf("Buts : %s\n", yytext); }
-
-.|\n ECHO;  // TODO après avoir fait les TODO précédents, enlever "ECHO"
-
-
-%%
-struct team *team_list;
-
-struct team* add_team(char *aux_team) {
-  struct team *tl;
-  for (; tl ; tl = tl->next){
-    if (lookup_team(aux_team) != team_list){
-      printf("Pas trouve <%s>, on l'ajoute", tl->name);
-      return NULL;
-    } else {
-        printf("Trouve <%s>", tl->name);
-    }
-
-    tl = (struct team*) malloc(sizeof(struct team));
-    tl->next = team_list;
-
-    tl->name = (char *) malloc(strlen(aux_team)+1);
-    strcpy(tl->name, aux_team);
-    team_list = tl;
-  }
-  return team_list;
-}
-
-struct team* lookup_team(char *aux_team) {
-  struct team *tl = team_list;
-  for (; tl ; tl = tl->next){
-    if(strcmp(tl->name,aux_team) == 0)
-      return tl;
-  }
-  return NULL;
-}
-void print_teams() {
-  // TODO
-}
+ 1. Kairat Almaty               1 pts (8 m)     2 - 3
+ 2. Sporting CP                 16 pts (8 m)    3 - 2
+ 3. Barcelona                   16 pts (8 m)    4 - 1
+ 4. Newcastle United            14 pts (8 m)    1 - 1
+ 5. Napoli                      8 pts (8 m)     2 - 3
+ 6. Manchester City             16 pts (8 m)    2 - 0
+ 7. Galatasaray                 10 pts (8 m)    0 - 2
+ 8. Eintracht Frankfurt         4 pts (8 m)     0 - 2
+ 9. Bayer Leverkusen            12 pts (8 m)    3 - 0
+10. Copenhagen                  8 pts (8 m)     1 - 4
+11. Monaco                      10 pts (8 m)    0 - 0
+12. Club Brugge                 10 pts (8 m)    3 - 0
+13. Atalanta                    13 pts (8 m)    0 - 1
+14. Paris Saint-Germain         14 pts (8 m)    1 - 1
+15. Atlético de Madrid          13 pts (8 m)    1 - 2
+16. Liverpool                   18 pts (8 m)    6 - 0
+17. Chelsea                     16 pts (8 m)    3 - 2
+18. Bayern München              21 pts (8 m)    2 - 1
+19. Inter                       15 pts (8 m)    2 - 0
+20. Ajax                        6 pts (8 m)     1 - 2
+21. Bodø/Glimt                  9 pts (8 m)     2 - 1
+22. Slavia Praha                3 pts (8 m)     1 - 4
+23. Pafos                       9 pts (8 m)     4 - 1
+24. Olympiakós                  11 pts (8 m)    2 - 1
+25. Villarreal                  1 pts (8 m)     0 - 3
+26. Tottenham                   17 pts (8 m)    2 - 0
+27. Qaraba                      10 pts (8 m)    0 - 6
+28. Benfica                     9 pts (8 m)     4 - 2
+29. Marseille                   9 pts (8 m)     0 - 3
+30. Real Madrid                 15 pts (8 m)    2 - 4
+31. Borussia Dortmund           11 pts (8 m)    0 - 2
+32. Juventus                    13 pts (8 m)    0 - 0
+33. Union Saint-Gilloise        9 pts (8 m)     1 - 0
+34. PSV Eindhoven               8 pts (8 m)     1 - 2
+35. Arsenal                     24 pts (8 m)    3 - 2
+36. Athletic Bilbao             8 pts (8 m)     2 - 3
