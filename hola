@@ -1,0 +1,51 @@
+%{
+#include "../lexyacc-files/scores.h"  // TODO modifier le chemin si besoin
+%}
+%%
+
+[ \t\n\-]+ ;
+
+
+
+
+([A-Za-zà-ÿ]+([ \-][A-ZÀ-Ýa-zà-ÿ]+)*) { printf("Equipe : %s\n", yytext); }
+
+[0-9]+ { printf("Buts : %s\n", yytext); }
+
+.|\n ECHO;  // TODO après avoir fait les TODO précédents, enlever "ECHO"
+
+
+%%
+struct team *team_list;
+
+struct team* add_team(char *aux_team) {
+  struct team *tl;
+  for (; tl ; tl = tl->next){
+    if (lookup_team(aux_team) != team_list){
+      printf("Pas trouve <%s>, on l'ajoute", tl->name);
+      return NULL;
+    } else {
+        printf("Trouve <%s>", tl->name);
+    }
+
+    tl = (struct team*) malloc(sizeof(struct team));
+    tl->next = team_list;
+
+    tl->name = (char *) malloc(strlen(aux_team)+1);
+    strcpy(tl->name, aux_team);
+    team_list = tl;
+  }
+  return team_list;
+}
+
+struct team* lookup_team(char *aux_team) {
+  struct team *tl = team_list;
+  for (; tl ; tl = tl->next){
+    if(strcmp(tl->name,aux_team) == 0)
+      return tl;
+  }
+  return NULL;
+}
+void print_teams() {
+  // TODO
+}
